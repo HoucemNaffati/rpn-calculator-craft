@@ -1,0 +1,29 @@
+[flake8]
+# Sets the maximum allowed line length.
+max-line-length = 84
+
+# C: Cyclomatic complexity warnings
+# E: PEP 8 errors about whitespace, etc.
+# F: PyFlakes codes for runtime issues
+# W: PEP 8 warnings about whitespace, etc.
+# B: Bugbear warnings for likely bugs and design problems
+# B9: More Bugbear warnings for potential bugs
+select = C,E,F,W,B,B9
+
+# E203: Whitespace before ':'
+# E501: Line too long (handled by max-line-length)
+# W503: Line break before binary operator (conflicts with W504)
+# C812: Missing trailing comma
+# E731: Do not assign a lambda expression, use a def
+ignore = E203, E501, W503, C812, E731
+
+# No need to traverse our git directory
+# There's no value in checking cache directories
+# Just ignore module indexes, which often have different requirements (e.g., wildcard imports)
+exclude = git, __pycache__, __init__.py
+
+# Sets the maximum allowed cyclomatic complexity for a function. A lower number enforces simpler functions.
+max-complexity = 5
+
+# Sets the maximum allowed cognitive complexity. Cognitive complexity measures how difficult code is to read and understand. A lower threshold encourages simpler, more readable code.
+max-cognitive-complexity = 3
