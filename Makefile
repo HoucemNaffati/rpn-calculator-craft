@@ -47,7 +47,7 @@ lint:
 	${PYTHON} -m isort src tests --check --diff
 
 type-check:
-	${PYTHON} -m pytype --config=pytype.cfg src
+	source .venv/bin/activate && ${PYTHON} -m pytype --config=pytype.cfg src
 
 secure:
 	${PYTHON} -m bandit -r src --config pyproject.toml

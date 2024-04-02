@@ -26,14 +26,3 @@ For running only unit tests:
 For running tests with coverage:
 
 `make test-cov`
-
-## TODOs
-* adapt project structure to a light cqrs version and init primary architecture
-* implement command pattern with a simple command Bus, each operand is a command, implement command handlers using TDD and DDD patterns
-* dockerize for production
-* implement real database adapters for production
-* add integration test using test containers
-* add documentation about project structure and architecture
-* add documentation about pre-commit hooks and explain the magic
-
-## Sandbox  suggestions

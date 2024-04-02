@@ -4,9 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="34415933-7b59-4628-9890-b35c2c58157b" name="Changes" comment="feat(bootstrap with fast api): fast-api blueprint with code formatter, linter, security, pre-commit hooks, readme and make files.">
-      <change beforePath="$PROJECT_DIR$/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/Makefile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+    <list default="true" id="34415933-7b59-4628-9890-b35c2c58157b" name="Changes" comment="chore(project architecture): introduced a simple cqrs structure and defined controllers.">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -26,6 +25,9 @@
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
+  <component name="OptimizeOnSaveOptions">
+    <option name="myRunOnSave" value="true" />
+  </component>
   <component name="ProblemsViewState">
     <option name="selectedTabId" value="CurrentFile" />
   </component>
@@ -38,29 +40,32 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Makefile Target.help.executor": "Run",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "master",
-    "last_opened_file_path": "/Users/houcemnaffati/PycharmProjects/rpn-calculator/src/rpn_calculator/web",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Makefile Target.help.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/houcemnaffati/PycharmProjects/rpn-calculator/src/rpn_calculator/write/web/routers&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;project.propVCSSupport.CommitDialog&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/rpn_calculator/write/web/routers" />
+      <recent name="$PROJECT_DIR$/src/rpn_calculator/shared" />
+      <recent name="$PROJECT_DIR$/src/rpn_calculator/write" />
+      <recent name="$PROJECT_DIR$/tests" />
       <recent name="$PROJECT_DIR$/src/rpn_calculator/web" />
-      <recent name="$PROJECT_DIR$" />
-      <recent name="$PROJECT_DIR$/.venv" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/rpn_calculator/read/web/routers" />
       <recent name="$PROJECT_DIR$/src/rpn-calculator/web" />
       <recent name="$PROJECT_DIR$" />
     </key>
@@ -118,7 +123,7 @@
       <updated>1711890827285</updated>
       <workItem from="1711890829411" duration="296000" />
       <workItem from="1711891238247" duration="5964000" />
-      <workItem from="1711902603864" duration="5685000" />
+      <workItem from="1711902603864" duration="17863000" />
     </task>
     <task id="LOCAL-00001" summary="feat: fast-api blueprint with code formatter, linter, security, readme and make files.">
       <option name="closed" value="true" />
@@ -136,7 +141,31 @@
       <option name="project" value="LOCAL" />
       <updated>1712045820978</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="feat(bootstrap with fast api): fast-api blueprint with code formatter, linter, security, pre-commit hooks, readme and make files.">
+      <option name="closed" value="true" />
+      <created>1712048222900</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1712048222900</updated>
+    </task>
+    <task id="LOCAL-00004" summary="chore(project architecture): introduced a simple cqrs structure and defined controllers.">
+      <option name="closed" value="true" />
+      <created>1712064576476</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1712064576476</updated>
+    </task>
+    <task id="LOCAL-00005" summary="chore(project architecture): introduced a simple cqrs structure and defined controllers.">
+      <option name="closed" value="true" />
+      <created>1712064591469</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1712064591469</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -156,6 +185,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="feat: fast-api blueprint with code formatter, linter, security, readme and make files." />
     <MESSAGE value="feat(bootstrap with fast api): fast-api blueprint with code formatter, linter, security, pre-commit hooks, readme and make files." />
-    <option name="LAST_COMMIT_MESSAGE" value="feat(bootstrap with fast api): fast-api blueprint with code formatter, linter, security, pre-commit hooks, readme and make files." />
+    <MESSAGE value="chore(project architecture): introduced a simple cqrs structure and defined controllers." />
+    <option name="LAST_COMMIT_MESSAGE" value="chore(project architecture): introduced a simple cqrs structure and defined controllers." />
+    <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
 </project>
