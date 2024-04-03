@@ -1,6 +1,6 @@
 from typing import Annotated
 
-from fastapi import APIRouter, Depends, HTTPException, Request, Response, status
+from fastapi import APIRouter, Depends, Request, Response
 
 from ....shared.domain_types import CommandType
 from ...core.usecases.add import AddCommand, AddCommandHandler
@@ -71,11 +71,6 @@ async def apply_command_to_the_stack(
             await divide_command_handler.handle(DivideCommand())
         case CommandType.clear:
             await clear_command_handler.handle(ClearCommand())
-        case _:
-            raise HTTPException(
-                status_code=status.HTTP_501_NOT_IMPLEMENTED,
-                detail="unsupported command",
-            )
 
     response.headers["Location"] = f"{request.url.path}"
     return {}

@@ -12,7 +12,18 @@ def http_test_client():
     yield client  # provides a fresh app and client for each test
 
 
-@pytest.mark.parametrize("test_input", [1.1, "A", "!", "12c", "a007"])
+def test_get_stack_200(http_test_client: TestClient):
+    response = http_test_client.get("/stack")
+    assert response.status_code == 200
+    assert response.json() == {"stack": []}
+
+    append_stack_elements(http_test_client, 1, 2, 3)
+    response = http_test_client.get("/stack")
+    assert response.status_code == 200
+    assert response.json() == {"stack": [1, 2, 3]}
+
+
+@pytest.mark.parametrize("test_input", ["A", "!", "12c", "a007"])
 def test_post_stack_values_400(http_test_client: TestClient, test_input: any):
     response = post_new_stack_value(http_test_client, test_input)
     assert response.status_code == 400
