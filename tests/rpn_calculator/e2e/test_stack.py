@@ -45,7 +45,7 @@ def test_put_stack_command_when_division_by_zero_422(http_test_client: TestClien
     assert response.status_code == 422
 
 
-@pytest.mark.parametrize("test_input", ["+", "-", "*", "/"])
+@pytest.mark.parametrize("test_input", ["+", "-", "*", "/", "C"])
 def test_put_stack_command_201(http_test_client, test_input: str):
     append_stack_elements(http_test_client, 1, 2)
     response = put_stack_command(http_test_client, test_input)

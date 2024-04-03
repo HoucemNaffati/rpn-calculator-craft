@@ -10,6 +10,9 @@ class RpnStack:
     def append(self, value) -> None:
         self.elements = tuple(self.elements + (value,))
 
+    def clear(self) -> None:
+        self.elements = tuple()
+
     def add(self):
         self.elements = Calculation(self.elements).add()
 
