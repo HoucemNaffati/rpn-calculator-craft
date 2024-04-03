@@ -1,9 +1,10 @@
-from rpn_calculator.write.adapters.inmemory_stack_repository import (
-    InMemoryStackRepository,
-)
-from rpn_calculator.write.core.domain.rpn_stack import RpnStack
-from rpn_calculator.write.core.ports.stack_repository import StackRepository
+from functools import lru_cache
+
+from ..core.domain.rpn_stack import RpnStack
+from ..core.ports.stack_repository import StackRepository
+from .inmemory_stack_repository import InMemoryStackRepository
 
 
+@lru_cache
 def get_stack_repository() -> StackRepository:
-    return InMemoryStackRepository(RpnStack(values=()))
+    return InMemoryStackRepository(RpnStack(elements=()))

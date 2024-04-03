@@ -1,6 +1,6 @@
 from abc import ABC, abstractmethod
 
-from rpn_calculator.write.core.domain.rpn_stack import RpnStack
+from ..domain.rpn_stack import RpnStack
 
 
 class StackRepository(ABC):

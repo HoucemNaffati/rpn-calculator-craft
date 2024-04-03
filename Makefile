@@ -27,10 +27,13 @@ install-dev:
 	${PYTHON} -m flit install --env --deps=develop --symlink && pre-commit install
 
 test-unit:
-	TEST_RUN="TRUE" ${PYTHON} -m pytest -svvv  -m unit tests
+	TEST_RUN="TRUE" ${PYTHON} -m pytest -svvv  -k "unit"
+
+test-e2e:
+	TEST_RUN="TRUE" ${PYTHON} -m pytest -svvv  -k "e2e"
 
 test:
-	TEST_RUN="TRUE" ${PYTHON} -m pytest -svvv  tests
+	TEST_RUN="TRUE" ${PYTHON} -m pytest -svvv tests
 
 test-cov:
 	TEST_RUN="TRUE" ${PYTHON} -m pytest -svvv --cov-report html --cov=src tests

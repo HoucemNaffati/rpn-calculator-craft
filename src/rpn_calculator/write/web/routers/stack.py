@@ -1,23 +1,12 @@
 from typing import Annotated
 
-from fastapi import APIRouter, Depends, Request, Response
-from pydantic import BaseModel
+from fastapi import APIRouter, Depends, HTTPException, Request, Response, status
 
-from rpn_calculator.shared.domain_types import CommandType
-from rpn_calculator.write.core.usecases.append import (
-    AppendCommand,
-    AppendCommandHandler,
-)
-from rpn_calculator.write.web.configuration import get_append_command_handler
-
-
-class AppendValueRequestParam(BaseModel):
-    value: int
-
-
-class ApplyCommandRequestParam(BaseModel):
-    command: CommandType
-
+from ....shared.domain_types import CommandType
+from ...core.usecases.add import AddCommand, AddCommandHandler
+from ...core.usecases.append import AppendCommand, AppendCommandHandler
+from ..configuration import get_add_command_handler, get_append_command_handler
+from .request_params import AppendValueRequestParam, ApplyCommandRequestParam
 
 router = APIRouter(prefix="/stack", tags=["Stack"])
 
@@ -37,11 +26,25 @@ async def append_one_value_to_the_stack(
 
 
 @router.put(
-    "/",
+    "",
     status_code=201,
     description="Apply one of the calculator commands to the stack",
 )
 async def apply_command_to_the_stack(
-    request_param: ApplyCommandRequestParam, request: Request, response: Response
+    request_param: ApplyCommandRequestParam,
+    request: Request,
+    response: Response,
+    add_command_handler: Annotated[AddCommandHandler, Depends(get_add_command_handler)],
 ):
+    print(request_param.command.value)
+    match request_param.command.value:
+        case CommandType.add:
+            await add_command_handler.handle(AddCommand())
+        case _:
+            raise HTTPException(
+                status_code=status.HTTP_501_NOT_IMPLEMENTED,
+                detail="unsupported command",
+            )
+
     response.headers["Location"] = f"{request.url.path}"
+    return {}

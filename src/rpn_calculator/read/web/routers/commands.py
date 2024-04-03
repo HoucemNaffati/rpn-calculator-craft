@@ -1,6 +1,6 @@
 from fastapi import APIRouter
 
-from rpn_calculator.shared.domain_types import CommandType
+from ....shared.domain_types import CommandType
 
 router = APIRouter(prefix="/commands", tags=["Commands"])
 

@@ -1,6 +1,6 @@
 from fastapi import APIRouter
 
-from rpn_calculator.write.web.routers import stack
+from . import stack
 
 write_router = APIRouter(
     responses={

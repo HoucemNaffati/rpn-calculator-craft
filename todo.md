@@ -11,3 +11,4 @@
 * add documentation about project structure and architecture
 * add documentation about pre-commit hooks and explain the magic
 * Setup CI/CD using github action
+* add mutation testing

@@ -13,7 +13,7 @@ from rpn_calculator.write.core.usecases.append import (
 @pytest.mark.asyncio
 async def test_append_when_stack_is_empty():
     await verify_append_stack(
-        command=AppendCommand(value=0), expected_stack=RpnStack(values=(0,))
+        command=AppendCommand(value=0), expected_stack=RpnStack(elements=(0,))
     )
 
 
@@ -21,8 +21,8 @@ async def test_append_when_stack_is_empty():
 async def test_append_when_stack_is_full_with_unique_values():
     await verify_append_stack(
         command=AppendCommand(value=-1),
-        expected_stack=RpnStack(values=(1, 2, -1)),
-        initial_stack=RpnStack(values=(1, 2)),
+        expected_stack=RpnStack(elements=(1, 2, -1)),
+        initial_stack=RpnStack(elements=(1, 2)),
     )
 
 
@@ -30,13 +30,15 @@ async def test_append_when_stack_is_full_with_unique_values():
 async def test_append_when_stack_is_full_with_duplicate_values():
     await verify_append_stack(
         command=AppendCommand(value=1),
-        expected_stack=RpnStack(values=(1, 1, 2, 1)),
-        initial_stack=RpnStack(values=(1, 1, 2)),
+        expected_stack=RpnStack(elements=(1, 1, 2, 1)),
+        initial_stack=RpnStack(elements=(1, 1, 2)),
     )
 
 
 async def verify_append_stack(
-    command: AppendCommand, expected_stack: RpnStack, initial_stack=RpnStack(values=())
+    command: AppendCommand,
+    expected_stack: RpnStack,
+    initial_stack=RpnStack(elements=()),
 ) -> None:
     stack_repository = InMemoryStackRepository(initial_stack)
     use_case = AppendCommandHandler(stack_repository)

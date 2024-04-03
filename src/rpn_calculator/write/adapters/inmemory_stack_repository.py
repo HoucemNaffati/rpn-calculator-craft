@@ -1,5 +1,5 @@
-from rpn_calculator.write.core.domain.rpn_stack import RpnStack
-from rpn_calculator.write.core.ports.stack_repository import StackRepository
+from ..core.domain.rpn_stack import RpnStack
+from ..core.ports.stack_repository import StackRepository
 
 
 class InMemoryStackRepository(StackRepository):

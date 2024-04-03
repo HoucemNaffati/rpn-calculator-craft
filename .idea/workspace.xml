@@ -4,11 +4,33 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="34415933-7b59-4628-9890-b35c2c58157b" name="Changes" comment="    chore(use_case append stack): added e2e and proper dependency injection mecanism">
-      <change afterPath="$PROJECT_DIR$/tests/rpn_calculator/e2e/test_commands.py" afterDir="false" />
+    <list default="true" id="34415933-7b59-4628-9890-b35c2c58157b" name="Changes" comment="    chore(use_case list commands ): added e2e tests">
+      <change afterPath="$PROJECT_DIR$/src/rpn_calculator/write/core/domain/exceptions.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/rpn_calculator/write/core/usecases/add.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/rpn_calculator/write/web/exception_handlers.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/rpn_calculator/write/web/routers/request_params.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/rpn_calculator/unit/test_add_command_handler.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.pre-commit-config.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/.pre-commit-config.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/Makefile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pyproject.toml" beforeDir="false" afterPath="$PROJECT_DIR$/pyproject.toml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/roadmap.md" beforeDir="false" afterPath="$PROJECT_DIR$/roadmap.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/rpn_calculator/read/web/routers/commands.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/rpn_calculator/read/web/routers/commands.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/rpn_calculator/read/web/routers/index.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/rpn_calculator/read/web/routers/index.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/rpn_calculator/shared/web/global_exception_handlers.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/rpn_calculator/shared/web/global_exception_handlers.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/rpn_calculator/web/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/rpn_calculator/web/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/rpn_calculator/write/adapters/configuration.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/rpn_calculator/write/adapters/configuration.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/rpn_calculator/write/adapters/inmemory_stack_repository.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/rpn_calculator/write/adapters/inmemory_stack_repository.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/rpn_calculator/write/core/domain/rpn_stack.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/rpn_calculator/write/core/domain/rpn_stack.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/rpn_calculator/write/core/ports/stack_repository.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/rpn_calculator/write/core/ports/stack_repository.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/rpn_calculator/write/core/usecases/append.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/rpn_calculator/write/core/usecases/append.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/rpn_calculator/write/web/configuration.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/rpn_calculator/write/web/configuration.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/rpn_calculator/write/web/routers/index.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/rpn_calculator/write/web/routers/index.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/rpn_calculator/write/web/routers/stack.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/rpn_calculator/write/web/routers/stack.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/rpn_calculator/e2e/test_commands.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/rpn_calculator/e2e/test_commands.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tests/rpn_calculator/e2e/test_stack.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/rpn_calculator/e2e/test_stack.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tests/rpn_calculator/unit/test_append_command_handler.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/rpn_calculator/unit/test_append_command_handler.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/todo.md" beforeDir="false" afterPath="$PROJECT_DIR$/todo.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -46,35 +68,48 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "Makefile Target.help.executor": "Run",
+    "Makefile Target.test-e2e.executor": "Run",
+    "Makefile Target.test-unit.executor": "Run",
+    "Makefile Target.test.executor": "Run",
+    "Python tests.Python tests for test_add_command_handler.test_add_command_when_the_stack_has_more_than_two_values.executor": "Run",
+    "Python tests.Python tests for test_add_command_handler.test_add_command_when_the_stack_has_one_value.executor": "Run",
+    "Python tests.Python tests for test_add_command_handler.test_add_command_when_the_stack_is_empty.executor": "Run",
+    "Python tests.Python tests for test_add_command_handler.test_add_command_with_two_positive_values_in_the_stack.executor": "Run",
     "Python tests.Python tests for test_append_command_handler.AppendCommandHandlerTest.executor": "Run",
     "Python tests.Python tests for test_append_command_handler.AppendCommandHandlerTest.test_append_when_stack_is_empty.executor": "Run",
     "Python tests.Python tests for test_append_command_handler.test_append_when_stack_is_empty.executor": "Run",
     "Python tests.Python tests for test_append_command_handler.test_append_when_stack_is_full.executor": "Run",
     "Python tests.Python tests for test_append_command_handler.test_append_when_stack_is_full_with_duplicate_values.executor": "Run",
-    "Python tests.Python tests for test_commands.test_get_commands_200.executor": "Debug",
+    "Python tests.Python tests for test_commands.test_get_commands_200.executor": "Run",
+    "Python tests.Python tests for test_stack.test_client.executor": "Run",
     "Python tests.Python tests for test_stack.test_post_stack_values.executor": "Run",
     "Python tests.Python tests for test_stack.test_post_stack_values_201.executor": "Run",
     "Python tests.Python tests for test_stack.test_post_stack_values_400.executor": "Run",
+    "Python tests.Python tests for test_stack.test_put_stack_command_201.executor": "Run",
+    "Python tests.Python tests for test_stack.test_put_stack_command_400.executor": "Run",
+    "Python tests.Python tests for test_stack.test_put_stack_command_when_empty_stack_422.executor": "Run",
+    "Python tests.Python tests for test_stack.test_put_stack_command_when_not_enough_elements_422.executor": "Run",
+    "Python tests.Python tests in test_stack.py.executor": "Run",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "master",
-    "last_opened_file_path": "/Users/houcemnaffati/PycharmProjects/rpn-calculator",
+    "last_opened_file_path": "/Users/houcemnaffati/PycharmProjects/rpn-calculator/tests/rpn_calculator/unit",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "project.propVCSSupport.CommitDialog",
+    "settings.editor.selected.configurable": "preferences.keymap",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/tests/rpn_calculator/unit" />
       <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/src/rpn_calculator/write/web/routers" />
       <recent name="$PROJECT_DIR$/src/rpn_calculator/shared" />
       <recent name="$PROJECT_DIR$/src/rpn_calculator/write" />
-      <recent name="$PROJECT_DIR$/tests" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/tests/rpn_calculator" />
@@ -84,7 +119,25 @@
       <recent name="$PROJECT_DIR$" />
     </key>
   </component>
-  <component name="RunManager" selected="Python tests.Python tests for test_stack.test_post_stack_values_201">
+  <component name="RunManager" selected="Makefile Target.test-e2e">
+    <configuration name="test-e2e" type="MAKEFILE_TARGET_RUN_CONFIGURATION" factoryName="Makefile" temporary="true">
+      <makefile filename="$PROJECT_DIR$/Makefile" target="test-e2e" workingDirectory="" arguments="">
+        <envs />
+      </makefile>
+      <method v="2" />
+    </configuration>
+    <configuration name="test-unit" type="MAKEFILE_TARGET_RUN_CONFIGURATION" factoryName="Makefile" temporary="true">
+      <makefile filename="$PROJECT_DIR$/Makefile" target="test-unit" workingDirectory="" arguments="">
+        <envs />
+      </makefile>
+      <method v="2" />
+    </configuration>
+    <configuration name="test" type="MAKEFILE_TARGET_RUN_CONFIGURATION" factoryName="Makefile" temporary="true">
+      <makefile filename="$PROJECT_DIR$/Makefile" target="test" workingDirectory="" arguments="">
+        <envs />
+      </makefile>
+      <method v="2" />
+    </configuration>
     <configuration name="main" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
       <module name="rpn-calculator" />
       <option name="ENV_FILES" value="" />
@@ -108,38 +161,6 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="Python tests for test_append_command_handler.test_append_when_stack_is_empty" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
-      <module name="rpn-calculator" />
-      <option name="ENV_FILES" value="" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/tests/rpn_calculator/unit" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;test_append_command_handler.test_append_when_stack_is_empty&quot;" />
-      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
-      <method v="2" />
-    </configuration>
-    <configuration name="Python tests for test_append_command_handler.test_append_when_stack_is_full_with_duplicate_values" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
-      <module name="rpn-calculator" />
-      <option name="ENV_FILES" value="" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/tests/rpn_calculator/unit" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;test_append_command_handler.test_append_when_stack_is_full_with_duplicate_values&quot;" />
-      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
-      <method v="2" />
-    </configuration>
     <configuration name="Python tests for test_commands.test_get_commands_200" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
       <module name="rpn-calculator" />
       <option name="ENV_FILES" value="" />
@@ -153,22 +174,6 @@
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
       <option name="_new_additionalArguments" value="&quot;&quot;" />
       <option name="_new_target" value="&quot;test_commands.test_get_commands_200&quot;" />
-      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
-      <method v="2" />
-    </configuration>
-    <configuration name="Python tests for test_stack.test_post_stack_values_201" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
-      <module name="rpn-calculator" />
-      <option name="ENV_FILES" value="" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/tests/rpn_calculator/e2e" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;test_stack.test_post_stack_values_201&quot;" />
       <option name="_new_targetType" value="&quot;PYTHON&quot;" />
       <method v="2" />
     </configuration>
@@ -190,11 +195,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python tests.Python tests for test_stack.test_post_stack_values_201" />
-        <item itemvalue="Python tests.Python tests for test_commands.test_get_commands_200" />
+        <item itemvalue="Makefile Target.test-e2e" />
+        <item itemvalue="Makefile Target.test-unit" />
+        <item itemvalue="Makefile Target.test" />
         <item itemvalue="Python tests.Python tests for test_stack.test_post_stack_values_400" />
-        <item itemvalue="Python tests.Python tests for test_append_command_handler.test_append_when_stack_is_full_with_duplicate_values" />
-        <item itemvalue="Python tests.Python tests for test_append_command_handler.test_append_when_stack_is_empty" />
+        <item itemvalue="Python tests.Python tests for test_commands.test_get_commands_200" />
       </list>
     </recent_temporary>
   </component>
@@ -215,7 +220,7 @@
       <updated>1711890827285</updated>
       <workItem from="1711890829411" duration="296000" />
       <workItem from="1711891238247" duration="5964000" />
-      <workItem from="1711902603864" duration="37377000" />
+      <workItem from="1711902603864" duration="51133000" />
     </task>
     <task id="LOCAL-00001" summary="feat: fast-api blueprint with code formatter, linter, security, readme and make files.">
       <option name="closed" value="true" />
@@ -289,7 +294,15 @@
       <option name="project" value="LOCAL" />
       <updated>1712156416061</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="    chore(use_case list commands ): added e2e tests">
+      <option name="closed" value="true" />
+      <created>1712156976796</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1712156976796</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -313,9 +326,10 @@
     <MESSAGE value="    feat(use_case append stack): implemented append command handler and unit tests" />
     <MESSAGE value="    chore(use_case append stack): added e2e and proper dependency injection mechanism" />
     <MESSAGE value="    chore(use_case append stack): added e2e and proper dependency injection mecanism" />
-    <option name="LAST_COMMIT_MESSAGE" value="    chore(use_case append stack): added e2e and proper dependency injection mecanism" />
+    <MESSAGE value="    chore(use_case list commands ): added e2e tests" />
+    <option name="LAST_COMMIT_MESSAGE" value="    chore(use_case list commands ): added e2e tests" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/rpn_calculator$.coverage" NAME=" Coverage Results" MODIFIED="1712156745174" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tests/rpn_calculator/e2e" />
+    <SUITE FILE_PATH="coverage/rpn_calculator$.coverage" NAME=" Coverage Results" MODIFIED="1712173373569" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tests/rpn_calculator/e2e" />
   </component>
 </project>
