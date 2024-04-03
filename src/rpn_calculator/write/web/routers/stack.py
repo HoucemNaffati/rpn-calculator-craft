@@ -2,6 +2,10 @@ from fastapi import APIRouter, Request, Response
 from pydantic import BaseModel
 
 from rpn_calculator.shared.domain_types import CommandType
+from rpn_calculator.write.core.usecases.append import (
+    AppendCommand,
+    AppendCommandHandler,
+)
 
 
 class AppendValueRequestParam(BaseModel):
@@ -19,7 +23,11 @@ router = APIRouter(prefix="/stack", tags=["Stack"])
 async def append_one_value_to_the_stack(
     request_param: AppendValueRequestParam, request: Request, response: Response
 ):
+    command = AppendCommand(value=request_param.value)
+    use_case = AppendCommandHandler()
+    await use_case.handle(command)
     response.headers["Location"] = f"{request.url.path}".replace("values", "")
+    return {}
 
 
 @router.put(
