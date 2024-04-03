@@ -46,4 +46,6 @@ DDD
 Test First
 Pyramid of tests with outside in approach (Chicago school)
 
-Find more information about VisionPM (my company) approach and culture [here](https://houcemnaffati.github.io/A-Software-Craftsmanship-KATA/):
+Find more information about VisionPM (my company) approach and culture,
+check out this software craftsmanship KATA I've created few years
+ago [here](https://houcemnaffati.github.io/A-Software-Craftsmanship-KATA/):
