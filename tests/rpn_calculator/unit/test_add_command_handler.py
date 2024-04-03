@@ -31,7 +31,8 @@ async def test_add_command_when_the_stack_has_more_than_two_values():
 @pytest.mark.asyncio
 async def test_add_command_when_the_stack_has_one_value():
     await verify_add_command_failure(
-        exception=CannotApplyRpnCommandException, initial_stack=RpnStack(elements=(1,))
+        exception=CannotApplyRpnCommandException,
+        initial_stack=RpnStack(elements=(1,)),
     )
 
 
@@ -55,5 +56,7 @@ async def verify_add_command(
 async def verify_add_command_failure(exception, initial_stack):
     with pytest.raises(exception):
         await verify_add_command(
-            AddCommand(), RpnStack(elements=(1, 1, 1, 1, 1)), initial_stack
+            command=AddCommand(),
+            expected_stack=RpnStack(elements=(1,)),
+            initial_stack=initial_stack,
         )
