@@ -16,5 +16,8 @@ class RpnStack:
     def subtract(self):
         self.elements = Calculation(self.elements).subtract()
 
+    def multiply(self):
+        self.elements = Calculation(self.elements).multiply()
+
     def clone(self):
         return RpnStack(elements=self.elements[:])

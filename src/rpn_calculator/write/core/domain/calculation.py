@@ -11,6 +11,9 @@ class Calculation:
     def subtract(self) -> tuple[int, ...]:
         return self.__calculate(lambda x, y: x - y)
 
+    def multiply(self) -> tuple[int, ...]:
+        return self.__calculate(lambda x, y: x * y)
+
     def __calculate(self, operation) -> tuple[int, ...]:
         if len(self.stack_elements) < 2:
             raise CannotApplyRpnCommandException
