@@ -31,7 +31,7 @@ def test_put_stack_command_400(http_test_client: TestClient, test_input: str):
     assert response.status_code == 400
 
 
-@pytest.mark.parametrize("test_input", ["+"])
+@pytest.mark.parametrize("test_input", ["+", "-"])
 def test_put_stack_command_when_not_enough_elements_422(
     http_test_client: TestClient, test_input: str
 ):
@@ -39,7 +39,7 @@ def test_put_stack_command_when_not_enough_elements_422(
     assert response.status_code == 422
 
 
-@pytest.mark.parametrize("test_input", ["+"])
+@pytest.mark.parametrize("test_input", ["+", "-"])
 def test_put_stack_command_201(http_test_client, test_input: str):
     append_stack_elements(http_test_client, 0, 0)
     response = put_stack_command(http_test_client, test_input)
