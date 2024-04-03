@@ -20,8 +20,8 @@ async def test_append_when_stack_is_empty():
 @pytest.mark.asyncio
 async def test_append_when_stack_is_full_with_unique_values():
     await verify_append_stack(
-        command=AppendCommand(value=0),
-        expected_stack=RpnStack(values=(1, 2, 0)),
+        command=AppendCommand(value=-1),
+        expected_stack=RpnStack(values=(1, 2, -1)),
         initial_stack=RpnStack(values=(1, 2)),
     )
 
